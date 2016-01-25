@@ -322,7 +322,7 @@ angular.module("ngRadialGauge",[]).directive('ngRadialGauge', ['$window', '$time
                 I'm assuming that calling render function is not what was intended on every value update.
              */
              // scope.$watchCollection('[ranges, data.ranges, data.value]', function () {
-             scope.$watchCollection('[ranges, data.ranges]', function () {
+             scope.$watchCollection('[ranges, data.ranges, data.lowerLimit, data.upperLimit,upperLimit,lowerLimit]', function () {
                  scope.render();
              }, true);
 
